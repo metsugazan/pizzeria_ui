@@ -1,6 +1,6 @@
 
 import React from 'react';
-import MapView from 'react-native-maps';
+import MapView, { Marker, Callout } from 'react-native-maps';
 import { StyleSheet, ScrollView, Text, View, TouchableOpacity, Image } from 'react-native';
 import { Card, Title, Paragraph, Actions, Button, Searchbar } from 'react-native-paper';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
@@ -12,8 +12,21 @@ ContactScreen = () => {
         <View style={styles.container}>
             <MapView
                 style={{ alignSelf: 'stretch', height: '30%' }}
-            //showsUserLocation=''
-            />
+                initialRegion={{
+                    latitude: 49.4927598,
+                    longitude: 0.1134049,
+                    latitudeDelta: 0,
+                    longitudeDelta: 0.0131,
+                }}
+            >
+                <Marker coordinate={{
+                    latitude: 49.4927598,
+                    longitude: 0.1134049,
+                }} >
+                    <Callout><Text>La Pizza de Manu</Text></Callout>
+                </Marker>
+            </MapView>
+
 
             <View style={{ flexDirection: 'row', backgroundColor: '#FAA307', borderRadius: 10, marginVertical: 10, marginHorizontal: 10, height: 120 }}>
                 <View style={{ flex: 1, marginVertical: 10, }}>
