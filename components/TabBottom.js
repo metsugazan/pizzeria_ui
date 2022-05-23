@@ -37,7 +37,7 @@ const TabBottomComponent = () => {
     });
 
     return (
-        <BottomNavigation style={styles.bottom}
+        <BottomNavigation
             navigationState={{ index, routes }}
             onIndexChange={setIndex}
             renderScene={renderScene}
@@ -48,9 +48,3 @@ const TabBottomComponent = () => {
 export default TabBottomComponent
 
 
-const styles = StyleSheet.create({
-
-    bottom: {
-           
-    },
-});
