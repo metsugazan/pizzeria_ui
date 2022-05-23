@@ -24,9 +24,9 @@ const TabBottomComponent = () => {
     const [index, setIndex] = React.useState(0);
     const [routes] = React.useState([
         { key: 'home', title: 'Accueil', icon: 'home', color: '#FAA307'},
-        { key: 'news', title: 'News', icon: 'history', color: 'tomato'},
-        { key: 'product', title: 'Produits', icon: 'plus-circle', color: '#FAA307' },
-        { key: 'contact', title: 'Contact', icon: 'cog', color: '#FAA307' },
+        { key: 'news', title: 'Nouvelles', icon: 'newspaper-variant', color: '#FFBA08'},
+        { key: 'product', title: 'Produits', icon: 'toolbox', color: '#FAA307' },
+        { key: 'contact', title: 'Contact', icon: 'phone-in-talk', color: '#FFBA08' },
     ]);
 
     const renderScene = BottomNavigation.SceneMap({

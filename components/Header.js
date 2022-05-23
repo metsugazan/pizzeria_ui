@@ -19,15 +19,7 @@ const styles = StyleSheet.create({
         right: 0,
         bottom: 0,
         height: 80,
-        marginTop: 40,
-            shadowColor: 'black',
-            shadowOffset: {
-                width: 0,
-                height: 5,
-            },
-            shadowOpacity: 0.25,
-            shadowRadius: 6.84,
-            elevation: 5,
+        marginTop: 25,
             flexDirection:'row-reverse',
             backgroundColor:'#ECEDCB'
         
