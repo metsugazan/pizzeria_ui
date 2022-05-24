@@ -1,24 +1,12 @@
 import * as React from 'react';
-import { ScrollView, View, Text } from 'react-native';
+import { ScrollView, View, Text, StyleSheet } from 'react-native';
 import { Card, Title, Paragraph } from 'react-native-paper';
-
-
 
 HomeScreen = () => {
     return (
         <ScrollView style={{ backgroundColor: '#ECEDCB' }}>
             <Card.Title title="La Pizza de manu" titleStyle={{ fontSize: 32, textAlign: 'center', fontWeight: 'bold', color: '#6A040F' }} />
-            <Card style={{
-                marginHorizontal: 15, borderRadius: 20,
-                shadowColor: 'black',
-                shadowOffset: {
-                    width: 0,
-                    height: 5,
-                },
-                shadowOpacity: 0.25,
-                shadowRadius: 6.84,
-                elevation: 5
-            }}>
+            <Card style={styles.homeimg}>
                 <Card.Cover style={{ width: '100%', height: 180, borderRadius: 20 }} source={require('../assets/images/pizzeria-home.jpg')} />
             </Card>
 
@@ -115,3 +103,18 @@ HomeScreen = () => {
 }
 
 export default HomeScreen
+
+
+const styles = StyleSheet.create({
+    homeimg: {
+        marginHorizontal: 15, borderRadius: 20,
+        shadowColor: 'black',
+        shadowOffset: {
+            width: 0,
+            height: 5,
+        },
+        shadowOpacity: 0.25,
+        shadowRadius: 6.84,
+        elevation: 5
+    }
+});

@@ -1,9 +1,12 @@
 import React from 'react';
-import { StyleSheet, ScrollView, Text, View, TouchableOpacity, Image } from 'react-native';
-import { Card, Title, Paragraph, Actions, Button, Searchbar } from 'react-native-paper';
+import { StyleSheet, ScrollView, Text, View, TouchableOpacity } from 'react-native';
+import { Card, Title, Searchbar } from 'react-native-paper';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 
-ProductScreen = () => {
+import ListComponent from '../components/ListComponent';
+import data from '../assets/pizza.json'
+
+export default function ProductScreen({navigation})  {
     const [searchQuery, setSearchQuery] = React.useState('');
     const onChangeSearch = query => setSearchQuery(query);
     return (
@@ -58,20 +61,18 @@ ProductScreen = () => {
                                 <Title style={{ fontSize: 22, fontWeight: 'bold', color: '#6A040F' }}>La Normande</Title>
                             </View>
                             <View style={{ flex: 1, justifyContent: 'center', marginRight: 5 }}>
-                                <TouchableOpacity><Icon name='chevron-right' size={50} style={{ color: '#6A040F' }} /></TouchableOpacity>
+                                <TouchableOpacity onPress={() => navigation.navigate('Details')}><Icon name='chevron-right' size={50} style={{ color: '#6A040F' }} /></TouchableOpacity>
                             </View>
                         </View>
                     </View>
-
                 </Card>
 
-
+                <ListComponent data={data} />
             </ScrollView>
         </View>
     );
 }
 
-export default ProductScreen
 
 
 const styles = StyleSheet.create({

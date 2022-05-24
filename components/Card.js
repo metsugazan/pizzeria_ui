@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { ScrollView, View, Text } from 'react-native';
+import { ScrollView, View } from 'react-native';
 import { Card, Title, Paragraph } from 'react-native-paper';
 
 const CardComponent = () => (

@@ -1,9 +1,9 @@
 
-import { StyleSheet, ScrollView, Text, View, TouchableOpacity, Image } from 'react-native';
-import { Card, Title, Paragraph, Actions, Button } from 'react-native-paper';
+import { StyleSheet, ScrollView, Text, View, TouchableOpacity } from 'react-native';
+import { Card, Title, Paragraph } from 'react-native-paper';
 import Icon from 'react-native-vector-icons/Ionicons';
 
-NewsScreen = () => {
+NewsScreen = ({navigation}) => {
     return (
         <ScrollView style={{ backgroundColor: '#ECEDCB' }}>
             <Card style={{
@@ -32,7 +32,7 @@ NewsScreen = () => {
 
                 </View>
                 <View style={{ flexDirection: 'row', flex: 1, alignContent: 'center', alignItems: 'center', }}>
-                    <TouchableOpacity style={styles.btn}><Text style={{ color: '#E85D04', textAlign: 'center', fontWeight: 'bold', lineHeight: 24 }}>Voir nos réalisations</Text></TouchableOpacity>
+                    <TouchableOpacity onPress={() => navigation.navigate('ProductScreen')} style={styles.btn}><Text style={{ color: '#E85D04', textAlign: 'center', fontWeight: 'bold', lineHeight: 24 }}>Voir nos réalisations</Text></TouchableOpacity>
                 </View>
             </Card>
 
